@@ -12,7 +12,9 @@ RUN \
 
 # Install Ansible module dependencies
 RUN \
-    pip --no-cache-dir --disable-pip-version-check install \
+    yum install -y \
+        git \
+    && pip --no-cache-dir --disable-pip-version-check install \
         pyhelm \
         grpcio
 
